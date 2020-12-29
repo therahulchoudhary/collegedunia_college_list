@@ -1,0 +1,397 @@
+*,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+}
+
+.cancel_word {
+    text-decoration: line-through;
+}
+
+.main_container {
+    width: 100%;
+    margin: auto;
+}
+
+.card_image {
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  filter:brightness(30%);
+}
+
+.main_heading {
+    padding: 24px;
+    font-weight: 400;
+    margin: 0;
+    font-size: 12px;
+}
+
+.items_container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+}
+
+.box_item {
+    position: relative;
+    margin: 24px;
+    flex-basis: calc(49.9% - 52px);
+    border-radius: 5px;
+    box-shadow: 0 5px 5px -1px lightgrey;
+    /* padding: 14px; */
+    border: 0.5px solid #e3e3e3;
+}
+
+.box_item_body {
+    padding: 8px;
+    position: relative;
+}
+
+.item_main_row,
+.item_top_row,
+.item_bottom_row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.item_main_row {
+    align-items: flex-start;
+}
+
+.item_top_row {
+    position: absolute;
+    top: -36px;
+    right: 0;
+    width: 100%;
+}
+
+.advantages_list {
+    list-style: none;
+    margin: 0;
+}
+
+.advantages_list li {
+    display: inline;
+    background: white;
+    border-radius: 20px;
+    padding: 6px 12px;
+    margin-left: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.ranking_text p {
+    color: white;
+    margin-right: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 4px;
+}
+
+.item_left_detail {
+    width: 70%;
+}
+
+.item_detail_heading_div {
+    display: flex;
+}
+
+.item_detail_heading {
+    font-size: 18px;
+    font-weight: 500;
+    padding-right: 10px;
+}
+
+.item_detail_subheading,
+.item_detail_preference {
+    font-size: 14px;
+    font-weight: 500;
+    color: grey;
+    padding: 8px 0;
+}
+
+.item_right_detail {
+    width: 30%;
+    text-align: right;
+}
+
+.original_price {
+    font-size: 12px;
+}
+
+.discount_label {
+    background: #DD1C26;
+    color: white;
+    padding: 0px 6px 0px 0;
+    margin-left: 14px;
+    position: relative;
+    font-size: 12px;
+    border-top: 1px solid #DD1C26;
+}
+
+.discount_label:after {
+    border: 7px solid transparent;
+    border-right: 7px solid #DD1C26;
+    bottom: 0px;
+    content: '';
+    height: 0;
+    left: -14px;
+    position: absolute;
+    width: 0;
+}
+
+.discount_price {
+    color: #DD1C26;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.fee_cycle {
+    font-size: 12px;
+    color: grey;
+}
+
+.offer_text {
+    background: #CCF5E7;
+    margin-left: -8px;
+    padding: 8px 16px 8px 8px;
+    font-size: 14px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.perks_list {
+    margin: 0;
+}
+
+.perks_list li {
+    display: inline;
+    color: #3AB497;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.rating_div {
+    padding: 8px;
+    position: absolute;
+    top: 26px;
+    right: 8px;
+    background: #F5A626;
+    border-radius: 5px;
+    color: white;
+    text-align: center;
+}
+.rating_div p {
+    font-size: 14px;
+}
+.promotion_div {
+    position: absolute;
+    top: -18px;
+    right: 0;
+    background: #68A7FF;
+    padding: 8px 24px;
+    color: white;
+    font-size: 16px;
+}
+
+.promotion_div:after {
+    border: 17px solid #68A7FF;
+    border-left: 17px solid transparent;
+    bottom: 0px;
+    content: '';
+    height: 0;
+    left: -17px;
+    position: absolute;
+    width: 0;
+}
+
+/* loader style */
+.loader {
+    display: flex;
+    align-self: center;
+    width: 40px;
+    margin:auto;
+    padding:20px 0;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .box_item {
+        flex-basis: 100%;
+    }
+
+    .main_heading {
+        font-size: 10px;
+    }
+
+    .advantages_list li {
+        font-size: 10px;
+    }
+
+    .ranking_text p {
+        font-size: 10px;
+    }
+
+    .promotion_div {
+        font-size: 10px;
+    }
+
+    .promotion_div:after {
+        border: 14px solid #68A7FF;
+        border-left: 14px solid transparent;
+        bottom: 0px;
+        content: '';
+        height: 0;
+        left: -18px;
+        position: absolute;
+        width: 0;
+    }
+
+    .card_image {
+        height: 200px;
+    }
+
+    .discount_label {
+        font-size: 12px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+    .item_top_row {
+        display: block;
+        top: -50px;
+    }
+
+    .item_main_row,
+    .item_bottom_row {
+        display: block;
+    }
+
+    .item_left_detail {
+        width: 100%;
+    }
+
+    .item_right_detail {
+        width: 100%;
+        text-align: left;
+    }
+    .item_detail_heading_div {
+        display: block;
+    }
+    .item_detail_heading {
+        font-size: 16px;
+    }
+    .item_detail_subheading,
+    .item_detail_preference,
+    .offer_text,
+    .perks_list li {
+        font-size: 12px;
+    }
+
+    .item_bottom_row {
+        padding: 4px 0;
+    }
+
+    .discount_label {
+        border-top: 0;
+    }
+
+    .discount_label:after {
+        border: 6.8px solid transparent;
+        border-right: 6.8px solid #DD1C26;
+        bottom: 0px;
+        content: '';
+        height: 0;
+        left: -13.5px;
+        position: absolute;
+        width: 0;
+    }
+
+    .ranking_text {
+        padding-left: 8px;
+        padding-top: 4px;
+    }
+
+    .rating_div,
+    .promotion_div {
+        font-size: 8px;
+    }
+
+    .rating_div {
+        top: 16px;
+    }
+
+    .promotion_div:after {
+        border: 12.5px solid #68A7FF;
+        border-left: 12.5px solid transparent;
+        bottom: 0px;
+        content: '';
+        height: 0;
+        left: -14px;
+        position: absolute;
+        width: 0;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+    .item_top_row {
+        display: block;
+        top: -50px;
+    }
+
+    .item_main_row,
+    .item_bottom_row {
+        display: block;
+    }
+
+    .item_left_detail {
+        width: 100%;
+    }
+
+    .item_right_detail {
+        width: 100%;
+        text-align: left;
+    }
+    .item_detail_heading_div {
+        display: block;
+    }
+    .item_detail_heading {
+        font-size: 16px;
+    }
+    .item_detail_subheading,
+    .item_detail_preference,
+    .offer_text,
+    .perks_list li {
+        font-size: 12px;
+    }
+
+    .item_bottom_row {
+        padding: 4px 0;
+    }
+
+    .discount_label {
+        border-top: 0;
+    }
+
+    .ranking_text {
+        padding-left: 8px;
+        padding-top: 4px;
+    }
+    .offer_text {
+        font-size: 10px;
+    }
+}
