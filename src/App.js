@@ -7,7 +7,6 @@ import StarRatings from '../node_modules/react-star-ratings';
 import InfiniteScroll from '../node_modules/react-infinite-scroll-component';
 
 function App() {
-
   const [count, setCount] = useState({
     prev: 0,
     next: 10
@@ -37,17 +36,17 @@ function App() {
         dataLength={current.length}
         next={getMoreData}
         hasMore={hasMore}
-        loader={<img src={loader} className="loader" />}
+        loader={<img src={loader} className="loader" alt="loader" />}
       >
         <div className="items_container">
 
           {current && current.map((el, index) => (
-            <div className="box_item">
+            <div key={index} className="box_item">
               <img src={cardImage} alt="card_image" width="100%" className="card_image" />
               <div className="box_item_body">
                 <div className="item_top_row">
                   <ul className="advantages_list">
-                    {el.tags.map((item, index) => (<li>{item}</li>))}
+                    {el.tags.map((item, index) => (<li key={index}>{item}</li>))}
                   </ul>
                   <div className="ranking_text">
                     <p>#{el.ranking}</p>
@@ -55,21 +54,20 @@ function App() {
                 </div>
                 <div className="item_main_row">
                   <div className="item_left_detail">
-                    {/* <h4 className="item_detail_heading">Hansraj College Delhi University * * * * *</h4> */}
                     <div className="item_detail_heading_div">
                       <h4 className="item_detail_heading">{el.college_name}</h4>
                       <div className="rating_stars">
                         <StarRatings
-                          starDimension="15px"
+                          starDimension="12px"
                           starSpacing="2px"
                           rating={el.rating}
-                          starRatedColor="grey"
+                          starRatedColor="#000"
                           numberOfStars={5}
                           name='rating'
                         />
                       </div>
                     </div>
-                    <h5 className="item_detail_subheading">{el.nearest_place.map((item, index) => (<span>{index !== 0 && <span> | </span>}{item}</span>))}</h5>
+                    <h5 className="item_detail_subheading">{el.nearest_place.map((item, index) => (<span key={index} style={{ color: index === 0 ? 'black' : '#BABABA' }}>{index !== 0 && <span> | </span>}{item}</span>))}</h5>
                     <p className="item_detail_preference"><span style={{ color: "#3AB497", fontWeight: 600 }}>93% Match :</span> {el.famous_nearest_places}
                     </p>
                   </div>
@@ -86,7 +84,7 @@ function App() {
                   </div>
                   <div className="perks">
                     <ul className="perks_list">
-                      {el.amenties.map((item, index) => (<li>{index !== 0 && <span> &#8226;</span>} {item}</li>))}
+                      {el.amenties.map((item, index) => (<li key={index}>{index !== 0 && <span> &#8226;</span>} {item}</li>))}
                     </ul>
                   </div>
                 </div>

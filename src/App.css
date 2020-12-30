@@ -112,7 +112,7 @@ body {
 .item_detail_preference {
     font-size: 14px;
     font-weight: 500;
-    color: grey;
+    color: #BABABA;
     padding: 8px 0;
 }
 
@@ -164,6 +164,10 @@ body {
     font-size: 14px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+
+.offer_text p{
+    font-weight: 700;
 }
 
 .perks_list {
